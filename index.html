@@ -4,13 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Redirecting…</title>
-  <meta http-equiv="refresh" content="0; url=https://sparkle-studies-8bp2nwpay-chrisbarkerzas-projects.vercel.app/">
-  <link rel="canonical" href="https://sparkle-studies-bivwewwjn-chrisbarkerzas-projects.vercel.app/">
+
+  <link id="canonical-link" rel="canonical" href="">
+  <meta id="refresh-meta" http-equiv="refresh" content="0">
+
   <script>
-    window.location.replace("https://sparkle-studies-8bp2nwpay-chrisbarkerzas-projects.vercel.app/");
+    const TARGET_URL = "https://sparkle-studies-8bp2nwpay-chrisbarkerzas-projects.vercel.app/";
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("canonical-link").href = TARGET_URL;
+      document.getElementById("refresh-meta").content = `0; url=${TARGET_URL}`;
+      document.getElementById("open-link").href = TARGET_URL;
+    });
+
+    window.location.replace(TARGET_URL);
   </script>
 </head>
 <body>
-  <p>Redirecting… If nothing happens, <a href="https://sparkle-studies-8bp2nwpay-chrisbarkerzas-projects.vercel.app/">open the site</a>.</p>
+  <p>
+    Redirecting… If nothing happens,
+    <a id="open-link" href="">open the site</a>.
+  </p>
 </body>
 </html>
